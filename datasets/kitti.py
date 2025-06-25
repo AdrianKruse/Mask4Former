@@ -134,7 +134,6 @@ class SemanticKITTIDataset(Dataset):
         features = np.hstack((coordinates, features))
 
         labels[:, 0] = np.vectorize(self.label_info.__getitem__)(labels[:, 0])
-        print(f"idx: {idx}")
 
         return {
             "num_points": acc_num_points,
